@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Entry } from '../entry/model/entry.interface';
 
 @Component({
   selector: 'app-calendar',
@@ -12,7 +11,7 @@ export class CalendarComponent implements OnInit {
       {title: 'React Native', imageurl: '../assets/react-native.png', starttime: '08:00'}
     ],
     Tuesday: [
-      
+      {title: 'Piano', imageurl: '../assets/piano.png', starttime: '11:00'}
     ],
     Wednesday: [
       {title: 'Angular', imageurl: '../assets/angular.png', starttime: '11:00'}
@@ -40,7 +39,7 @@ export class CalendarComponent implements OnInit {
   
   getDays = () => { return Object.keys( this.entries ) }
 
-  getDayEntries(day): Entry[] {
+  getDayEntries(day){
     return this.entries[day]
   }
 }
