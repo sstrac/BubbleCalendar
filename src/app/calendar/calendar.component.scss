@@ -1,0 +1,32 @@
+table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+}
+td, th {
+    border: 1px solid #ddd;
+    padding: 4px;
+}  
+tr:nth-child(even){background-color: #f2f2f2;}
+// td:hover {background-color: #ddd;}  
+th {
+    width: 50%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #203aac;
+    color: white;
+}
+td {
+    height: 140px;
+}
+th.day {
+   width: 90%;
+}
+td.time{
+    vertical-align: text-top;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: medium;
+    width: unset;
+}

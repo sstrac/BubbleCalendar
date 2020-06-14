@@ -1,0 +1,26 @@
+<table>
+    <tr>
+        <th></th>
+        <th *ngFor="let day of getDays()">
+            {{day}}
+        </th>
+    </tr>
+    <tr *ngFor="let time of times">
+        <td class="time">{{time}}</td>
+        <!-- <td class="cell" *ngFor="let day of days">
+            <div cdkDropList (cdkDropListDropped)="drop($event)" *ngFor="let entry of entries">
+                <div cdkDrag *ngIf="entry.day==day">
+                    <app-entry *ngIf="entry.starttime==time" [image]="entry.imageurl"
+                        [title]="entry.title">
+                    </app-entry>
+                </div>
+            </div>
+        </td> -->
+        <td cdkDropList (cdkDropListDropped)="drop($event)" *ngFor="let day of getDays()">
+            <div cdkDrag *ngFor="let entry of getDayEntries(day)">
+                <app-entry *ngIf="entry.starttime==time" [image]="entry.imageurl" [title]="entry.title">
+                </app-entry>
+            </div>
+        </td>
+    </tr>
+</table>
